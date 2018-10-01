@@ -1,0 +1,469 @@
+STAR version=STAR_2.5.3a_modified
+STAR compilation time,server,dir=Thu Dec 7 11:00:34 EST 2017 florence.cshl.edu:/sonas-hs/gingeras/nlsas_norepl/user/dobin/STAR/STAR.sandbox/source
+##### DEFAULT parameters:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           alignReads
+runThreadN                        1
+runDirPerm                        User_RWX
+runRNGseed                        777
+genomeDir                         ./GenomeDir/
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  -   
+genomeChainFiles                  -   
+genomeSAindexNbases               14
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+genomeSuffixLengthMax             18446744073709551615
+genomeFileSizes                   0   
+genomeConsensusFile               -
+readFilesType                     Fastx   
+readFilesIn                       Read1   Read2   
+readFilesPrefix                   -
+readFilesCommand                  -   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+readNameSeparator                 /   
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outFileNamePrefix                 ./
+outTmpDir                         -
+outTmpKeep                        None
+outStd                            Log
+outReadsUnmapped                  None
+outQSconversionAdd                0
+outMultimapperOrder               Old_2.4
+outSAMtype                        SAM   
+outSAMmode                        Full
+outSAMstrandField                 None
+outSAMattributes                  Standard   
+outSAMunmapped                    None   
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSAMfilter                      None   
+outSAMmultNmax                    18446744073709551615
+outSAMattrIHstart                 1
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     Normal
+outFilterMultimapNmax             10
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0.66
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0.66
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             None
+outFilterIntronStrands            RemoveInconsistentStrands
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+winReadCoverageRelativeMin        0.5
+winReadCoverageBasesMin           0
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+seedSplitMin                      12
+alignIntronMin                    21
+alignIntronMax                    0
+alignMatesGapMax                  0
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                5
+alignSJDBoverhangMin              3
+alignSJstitchMismatchNmax         0   -1   0   0   
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+alignEndsProtrude                 0   ConcordantPair   
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimMainSegmentMultNmax           10
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold   
+chimFilter                        banGenomicN   
+chimSegmentReadGapMax             0
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       -
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         2
+sjdbInsertSave                    Basic
+quantMode                         -   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       None
+##### Command Line:
+STAR --runThreadN 70 --runMode genomeGenerate --genomeDir /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index --genomeFastaFiles MRE600_rRNA_consensus.fa --genomeSAindexNbases 4
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    70     ~RE-DEFINED
+runMode                       genomeGenerate     ~RE-DEFINED
+genomeDir                     /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index     ~RE-DEFINED
+genomeFastaFiles              MRE600_rRNA_consensus.fa        ~RE-DEFINED
+genomeSAindexNbases           4     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate
+runThreadN                        70
+genomeDir                         /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index
+genomeFastaFiles                  MRE600_rRNA_consensus.fa   
+genomeSAindexNbases               4
+
+-------------------------------
+##### Final effective command line:
+STAR   --runMode genomeGenerate   --runThreadN 70   --genomeDir /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index   --genomeFastaFiles MRE600_rRNA_consensus.fa      --genomeSAindexNbases 4
+
+##### Final parameters after user input--------------------------------:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           genomeGenerate
+runThreadN                        70
+runDirPerm                        User_RWX
+runRNGseed                        777
+genomeDir                         /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  MRE600_rRNA_consensus.fa   
+genomeChainFiles                  -   
+genomeSAindexNbases               4
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+genomeSuffixLengthMax             18446744073709551615
+genomeFileSizes                   0   
+genomeConsensusFile               -
+readFilesType                     Fastx   
+readFilesIn                       Read1   Read2   
+readFilesPrefix                   -
+readFilesCommand                  -   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+readNameSeparator                 /   
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outFileNamePrefix                 ./
+outTmpDir                         -
+outTmpKeep                        None
+outStd                            Log
+outReadsUnmapped                  None
+outQSconversionAdd                0
+outMultimapperOrder               Old_2.4
+outSAMtype                        SAM   
+outSAMmode                        Full
+outSAMstrandField                 None
+outSAMattributes                  Standard   
+outSAMunmapped                    None   
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSAMfilter                      None   
+outSAMmultNmax                    18446744073709551615
+outSAMattrIHstart                 1
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     Normal
+outFilterMultimapNmax             10
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0.66
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0.66
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             None
+outFilterIntronStrands            RemoveInconsistentStrands
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+winReadCoverageRelativeMin        0.5
+winReadCoverageBasesMin           0
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+seedSplitMin                      12
+alignIntronMin                    21
+alignIntronMax                    0
+alignMatesGapMax                  0
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                5
+alignSJDBoverhangMin              3
+alignSJstitchMismatchNmax         0   -1   0   0   
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+alignEndsProtrude                 0   ConcordantPair   
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimMainSegmentMultNmax           10
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold   
+chimFilter                        banGenomicN   
+chimSegmentReadGapMax             0
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       -
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         2
+sjdbInsertSave                    Basic
+quantMode                         -   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       None
+----------------------------------------
+
+Finished loading and checking parameters
+Sep 30 21:05:05 ... starting to generate Genome files
+MRE600_rRNA_consensus.fa : chr # 0  "E.c.23S_rRNA" chrStart: 0
+MRE600_rRNA_consensus.fa : chr # 1  "E.c.16S_rRNA" chrStart: 262144
+MRE600_rRNA_consensus.fa : chr # 2  "E.c.5S___rRNA" chrStart: 524288
+Number of SA indices: 9132
+Sep 30 21:05:05 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 81;   chunks size limit: 1056 bytes
+Sep 30 21:05:05 ... sorting Suffix Array chunks and saving them to disk...
+Writing 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ... done
+g 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ... done
+ done
+ done
+g 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ... done
+ done
+g 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ...Writing 808 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_5 ; empty space on disk = 2774293221376 bytes ... done
+ done
+g 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ...Writing 808 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_5 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_16 ; empty space on disk = 2774293221376 bytes ...Writing  done
+g 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ...Writing 808 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_5 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_16 ; empty space on disk = 2774293221376 bytes ...Writing 976 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_12 ; empty space on disk = Writing 27742932213761032 bytes into  bytes ... done
+ done
+ done
+g 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ...Writing 808 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_5 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_16 ; empty space on disk = 2774293221376 bytes ...Writing 976 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_12 ; empty space on disk = Writing 27742932213761032 bytes into  bytes .../fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_23 ; empty space on disk = 2774293221376 bytes ... done
+g 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ...Writing 808 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_5 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_16 ; empty space on disk = 2774293221376 bytes ...Writing 976 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_12 ; empty space on disk = Writing 27742932213761032 bytes into  bytes .../fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_23 ; empty space on disk = 2774293221376 bytes ...Writing 984Writing /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_20 ; empty space on disk = 6482774293221376/fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_27 bytes ... done
+ done
+ done
+ done
+ done
+bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ...Writing 808 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_5 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_16 ; empty space on disk = 2774293221376 bytes ...Writing 976 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_12 ; empty space on disk = Writing 27742932213761032 bytes into  bytes .../fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_23 ; empty space on disk = 2774293221376 bytes ...Writing 984Writing /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_20 ; empty space on disk = 6482774293221376/fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_27 bytes ...2774293221376 bytes ... done
+ done
+ done
+bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_2 ; empty space on disk = 2774293221376 bytes ...Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_3 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_19 ; empty space on disk = 2774293221376 bytes ...Writing 808 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_5 ; empty space on disk = 2774293221376 bytes ...Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_16 ; empty space on disk = 2774293221376 bytes ...Writing 976 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_12 ; empty space on disk = Writing 27742932213761032 bytes into  bytes .../fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_23 ; empty space on disk = 2774293221376 bytes ...Writing 984Writing /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_20 ; empty space on disk = 6482774293221376/fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_27 bytes ...2774293221376 bytes ...Writing 928 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_0 ; empty space on disk = 2774293221376 bytes ... done
+Writing 1040 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_28 ; empty space on disk = 2774293172224 bytes ... done
+Writing 984 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_66 ; empty space on disk = 2774293168128 bytes ... done
+Writing 864 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_7 ; empty space on disk = 2774293164032 bytes ... done
+Writing 736 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_26 ; empty space on disk = 2774293159936 bytes ... done
+Writing Writing 792 bytes into 936/fastscratch/fastscratch/boris/LASER_seq_results/batch2_onc112/star ; empty spa ; empty space on disk = 2774293155840 bytes ... done
+g Writing 792 bytes into 936/fastscratch/fastscratch/boris/LASER_seq_results/batch2_onc112/star ; empty spa ; empty space on disk = 2774293155840 bytes ...2774293155840 bytes ... done
+ done
+Writing 840 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_8 ; empty space on disk = 2774293147648 bytes ... done
+Writing 640 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_6 ; empty space on disk = 2774293143552 bytes ... done
+Writing 704 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_13 ; empty space on disk = 2774293139456 bytes ...Writing 776 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_11 done
+ty space on disk = 277429Writing 776 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_11 done
+ty space on disk = 2774292774293139456 bytes ...Writing 968 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_69 ; empty space on disk = disk = 2774293139456 bytes ...944 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_10 ; empty space on disk = 2774293139456 bytes ...tes ... done
+g 968 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_69 ; empty space on disk = 2774293139456 bytes ...tes ... done
+g 968 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_69 ; empty space on disk = 2774293139456 bytes ...tes ...944 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_10 ; empty space on disk = 2774293139456 bytes ... done
+g  done
+g 968 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_69 ; empty space on disk = 2774293139456 bytes ... done
+ done
+992 by992 by992 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_65 ; empty space on disk = 2774293131264 bytes ... done
+Writing 992 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_1 ; empty space on disk = 2774293106688 bytes ... done
+Writing 704 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_70 ; empty space on disk = 2774293102592 bytes ... done
+Writing 984 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_75 ; empty space on disk = 2774293098496 bytes ... done
+ done
+Writing 960 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_74 ; empty space on disk = 2774293098496 bytes ... done
+Writing 912 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_72 ; empty space on disk = 2774293094400 bytes ... done
+Writing 816 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_73 ; empty space on disk = 2774293086208 bytes ... done
+Writing 936 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_77 ; empty space on disk = 2774293082112 bytes ... done
+Writing 832 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_78 ; empty space on disk = 2774293078016 bytes ... done
+Writing 912 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_76 ; empty space on disk = 2774293073920 bytes ... done
+Writing 936 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_71 ; empty space on disk = 2774293073920 bytes ... done
+Writing 752 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_24 ; empty space on disk = 2774293065728 bytes ... done
+g 752 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_24 ; empty space on disk = 2774293065728 bytes ...Writing 1016 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_53 ; empty space on disk = 2774293065728 bytes ... done
+g 752 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_24 ; empty space on disk = 2774293065728 bytes ...Writing 1016 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_53 ; empty space on disk = 2774293065728 bytes ...Writing 840 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_37 ; empty space on disk = 2774293065728 bytes ... done
+g 752 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_24 ; empty space on disk = 2774293065728 bytes ...Writing 1016 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_53 ; empty space on disk = 2774293065728 bytes ...Writing 840 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_37 ; empty space on disk = 2774293065728 bytes ...Writing 1056 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_63 ; empty space on disk = 2774293065728 bytes ...Writing  done
+g 752 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_24 ; empty space on disk = 2774293065728 bytes ...Writing 1016 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_53 ; empty space on disk = 2774293065728 bytes ...Writing 840 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_37 ; empty space on disk = 2774293065728 bytes ...Writing 1056 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_63 ; empty space on disk = 2774293065728 bytes ...Writing 848 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_49 ; empty space on disk = 2774293065728 bytes ... done
+g 752 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_24 ; empty space on disk = 2774293065728 bytes ...Writing 1016 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_53 ; empty space on disk = 2774293065728 bytes ...Writing 840 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_37 ; empty space on disk = 2774293065728 bytes ...Writing 1056 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_63 ; empty space on disk = 2774293065728 bytes ...Writing 848 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_49 ; empty space on disk = 2774293065728 bytes ...Writing 904 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_32 ; empty space on disk = 2774293065728 bytes ... done
+ done
+ done
+ done
+ done
+ done
+ done
+Writing 944 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_60 ; empty space on disk = 2774293037056 bytes ... done
+Writing 848 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_35 ; empty space on disk = 2774293037056 bytes ... done
+Writing tes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_35 ; empty space on disk = 2774293037056 bytes ...Writing 1040 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_15 ; empty space on disk = 2774293032960 bytes ... done
+ done
+g 952 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_39 ; empty space on disk = 2774293032960 bytes ...es ... done
+g 952 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_39 ; empty space on disk = 2774293032960 bytes ... done
+ done
+g 1024 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_48 ; empty space on disk = 2774293024768 bytes ... done
+g 1024 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_48 ; empty space on disk = 2774293024768 bytes ... done
+ done
+ done
+Writing  bytes into 856 bytes into ris/LASER_seq_results/batch2_onc112/star_index/SA_29/fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_44 ; empty space on disk = 27742930165762774293016576_onc112/st bytes ... done
+g  bytes into 856 bytes into ris/LASER_seq_results/batch2_onc112/star_index/SA_29/fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_44 ; empty space on disk = 27742930165762774293016576_onc112/st bytes ... done
+ done
+Writing 880 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_55 ; empty space on disk = 2774293012480 bytes ... done
+Writing 1056 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_40 ; empty space on disk = 2774293004288 bytes ...Writing 1056 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_40 ; empty space on disk = 2774293004288 bytes ...Writing 880 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_62 ; empty space on disk = 2774293000192 bytes ... done
+Writing 1016 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_51 ; empty space on disk =  done
+2996096 bytesWriting 1016 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_51 ; empty space on disk =  done
+2996096 bytes ...Writin done
+Writing 1000 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_57 ; empty space on disk = 2774292987904 bytes ... done
+Writing 1056 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_46 ; empty space on disk = 2774292983808 bytes ... done
+Writing 704 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_38 ; empty space on disk = 2774292979712 bytes ... done
+Writing 728 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_54 ; empty space on disk = 2774292975616 bytes ... done
+Writing 1032 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_33 ; empty space on disk = 2774292971520 bytes ...Writing  done
+Writing  done
+864 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_22 ; empty space on disk = 2774292967424 bytes ... done
+Writing 840 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_79 ; empty space on disk = 2774292963328 bytes ... done
+Writing 760 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_80 ; empty space on disk = 2774292963328 bytes ... done
+Writing 848 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_64 ; empty space on disk = 2774292955136 bytes ... done
+Writing 1040 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_17 ; empty space on disk = 2774292946944 bytes ... done
+Writing 968 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_52 ; empty space on disk = 2774292942848 bytes ... done
+Writing 672 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_41 ; empty space on disk = 2774292942848 bytes ... done
+Writing 952 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_18 ; empty space on disk = 2774292934656 bytes ...Writing 952 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_18 ; empty space on disk = 2774292934656 bytes ...Writing 896 done
+Writing 952 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_18 ; empty space on disk = 2774292934656 bytes ...Writing 896 done
+ into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_59 ; empty space on disk = 2774292934656 bytes ... done
+Writing 1056 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_56 ; empty space on disk = 2774292926464 bytes ... done
+Writing 880 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_42 ; empty space on disk = 2774292922368 bytes ... done
+Writing 976 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_45 ; empty space on disk = 2774292918272 bytes ... done
+Writing 872 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_25 ; empty space on disk = 2774292914176 bytes ... done
+Writing 936 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_34 ; empty space on disk = 2774292910080 bytes ... done
+ done
+g 936 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_34 ; empty space on disk = 2774292910080 bytes ....Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_21 ; empty space on disk = 2774292926464 bytes ... done
+ done
+g 936 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_34 ; empty space on disk = 2774292910080 bytes ....Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_21 ; empty space on disk = 2774292926464 bytes ...Writing 968 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_61 ; empty space on disk = 2774292926464 bytes ... done
+ done
+g 936 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_34 ; empty space on disk = 2774292910080 bytes ....Writing 1008 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_21 ; empty space on disk = 2774292926464 bytes ...Writing 968 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_61 ; empty space on disk = 2774292926464 bytes ...Writing 1000 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_31 ; empty space on disk = 2774292926464 bytes ... done
+Writing 784 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_30 ; empty space on disk = 2774292893696 bytes ... done
+Writing 1000 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_58 ; empty space on disk = 2774292889600 bytes ... done
+Writing 864 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_43 ; empty space on disk = 2774292885504 bytes ... done
+Writing 792 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_36 ; empty space on disk = 2774292881408 bytes ... done
+Writing 888 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_47 ; empty space on disk = 2774292877312 bytes ... done
+Writing 920 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA_50 ; empty space on disk = 2774292873216 bytes ... done
+Sep 30 21:05:05 ... loading chunks from disk, packing SA...
+Sep 30 21:05:05 ... finished generating suffix array
+Sep 30 21:05:05 ... generating Suffix Array index
+Sep 30 21:05:05 ... completed Suffix Array index
+Sep 30 21:05:05 ... writing Genome to disk ...
+Writing 786432 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/Genome ; empty space on disk = 2774293192704 bytes ... done
+SA size in bytes: 37673
+Sep 30 21:05:05 ... writing Suffix Array to disk ...
+Writing 37673 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SA ; empty space on disk = 2774292406272 bytes ... done
+Sep 30 21:05:05 ... writing SAindex to disk
+Writing 8 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SAindex ; empty space on disk = 2774292365312 bytes ... done
+Writing 40 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SAindex ; empty space on disk = 2774292365312 bytes ... done
+Writing 1491 bytes into /fastscratch/boris/LASER_seq_results/batch2_onc112/star_index/SAindex ; empty space on disk = 2774292365312 bytes ... done
+Sep 30 21:05:05 ..... finished successfully
+DONE: Genome generation, EXITING
